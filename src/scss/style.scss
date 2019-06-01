@@ -2,12 +2,15 @@
 @import "_commonStyle.scss";
 
 html {
+  touch-action: manipulation;
+
+  body {
+    font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     touch-action: manipulation;
-
-    body {
-        font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        touch-action: manipulation;
-        overflow-x: hidden;
+    overflow-x: hidden;
+    background: #222;
+    h1 {
+      color: #fff;
     }
+  }
 }
-
