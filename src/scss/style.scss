@@ -10,6 +10,16 @@ html {
 
     $textSize:1rem;
 
+    $fontClass:"serif";
+    $value:1+$fontClass;
+
+    @mixin test_2($margin,$xolor) {
+        &:after{
+            content:"#{$value}";
+            margin: $margin;
+        }
+    }
+
     @mixin textColor ($textSize, $color){
         font-size: $textSize;
         color: $color;
@@ -26,4 +36,29 @@ html {
             @include textColor($textSize, $white)
         }
     }
+    div {
+        &:after{
+            content:"";
+            margin:$margin;
+            color: $color;
+        }
+    }
+
+    $fontClass:"serif";
+$value:1+$fontClass;
+$colorTheme:hsl(20%,100%,50%);
+$marginTheme: 2ren + 4ren;
+
+
+@mixin test_2($margin,$color) {
+    &:after{
+      content:"#{$value}";
+      margin: $margin;
+      color:$color;
+    }
+  }
+  
+p{
+  @include test_2($marginTheme,$marginTheme)
+}
 }
