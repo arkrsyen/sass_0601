@@ -61,4 +61,25 @@ $marginTheme: 2ren + 4ren;
 p{
   @include test_2($marginTheme,$marginTheme)
 }
+@function setPadding($topBottom, $leftRight){
+    $conbine:#{$topBottom*2rem +''+$leftRight*1rem};
+    @return $conbine;
+  }
+.classCard{
+    @for $i from 1 through 3 {
+        .class-#{$i} { width: $i; }
+      }
+      
+      @each $i in Shielder,Saber,Archer,Lancer,Rider,Caster{
+        .#{$i}{
+          background:url(..//img/#{$i}.jpg);
+          padding:conbine(5,10);
+        }
+      }
+}
+
+
+
+}
+
 }
