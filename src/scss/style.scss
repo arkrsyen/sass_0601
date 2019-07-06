@@ -1,5 +1,7 @@
 @import "_reset.scss";
 @import "_commonStyle.scss";
+@import "_flexbox.scss";
+//@import "_dataAttribute.scss";
 
 html {
     touch-action: manipulation;
@@ -13,35 +15,13 @@ html {
     $fontClass:"serif";
     $value:1+$fontClass;
 
-    @mixin test_2($margin,$xolor) {
-        &:after{
-            content:"#{$value}";
-            margin: $margin;
-        }
-    }
 
-    @mixin textColor ($textSize, $color){
-        font-size: $textSize;
-        color: $color;
-        @if $color == $dark{
-            text-align: center;
-        }
-    }
     body {
         font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
         touch-action: manipulation;
         overflow-x: hidden;
-        background: #222;
-        h1 {
-            @include textColor($textSize, $white)
-        }
-    }
-    div {
-        &:after{
-            content:"";
-            margin:$margin;
-            color: $color;
-        }
+        background: #fff;
+  
     }
 
     $fontClass:"serif";
@@ -50,17 +30,6 @@ $colorTheme:hsl(20%,100%,50%);
 $marginTheme: 2ren + 4ren;
 
 
-@mixin test_2($margin,$color) {
-    &:after{
-      content:"#{$value}";
-      margin: $margin;
-      color:$color;
-    }
-  }
-  
-p{
-  @include test_2($marginTheme,$marginTheme)
-}
 @function setPadding($topBottom, $leftRight){
     $conbine:#{$topBottom*2rem +''+$leftRight*1rem};
     @return $conbine;
@@ -78,8 +47,22 @@ p{
       }
 }
 
+.container{
+  background-color: #efefef;
+  span{
+    @include boxSizing;
+    padding: 0.5rem;
+    height: 10vh;
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+    }
+  }
+}
 
 
 }
 
-}

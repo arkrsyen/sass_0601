@@ -162,7 +162,7 @@ $fontSize_mini: 0.65em;
 
 /* media query */
 
-$$ipad:"screen and (max-widch:1024px) and (orientation:landscape) and (-webkit-max-device-pixel-ratio: 2) and (max-resolution: 192dpi)";
+$ipad:"screen and (max-widch:1024px) and (orientation:landscape) and (-webkit-max-device-pixel-ratio: 2) and (max-resolution: 192dpi)";
 $iphoneX:"screen and (max-widch:812px) and (max-heigh:375px) and (-webkit-max-device-pixel-ratio: 3) and (max-resolution: 458dpi)";
 
 @mixin ipad {
