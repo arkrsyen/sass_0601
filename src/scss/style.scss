@@ -35,18 +35,37 @@ $marginTheme: 2ren + 4ren;
     $conbine:#{$topBottom*2rem +''+$leftRight*1rem};
     @return $conbine;
   }
-.classCard{
-    @for $i from 1 through 3 {
-        .class-#{$i} { width: $i; }
+
+  .lobby{
+    display: block;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 1080px;
+    background: url('../img/bg.jpg');
+  }
+
+  .resume{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../img/user_status_bg.png') no-repeat;
+    .playerPic{
+      position: absolute;
+      border-radius: 999px;
+      width: 150px;
+      height: 150px;
+      border: solid 3px #fff; 
+      .playerPic::before{
+        content: "";
+        
+        width: 100%;
+        height: 100%;
       }
-      
-      @each $i in Shielder,Saber,Archer,Lancer,Rider,Caster{
-        .#{$i}{
-          background:url(..//img/#{$i}.jpg);
-          padding:conbine(5,10);
-        }
-      }
-}
+    }
+  } 
 
 .container{
   background-color: #efefef;
