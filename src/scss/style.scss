@@ -1,7 +1,8 @@
 @import "_reset.scss";
+@import "_variable.scss";
 @import "_commonStyle.scss";
 @import "_flexbox.scss";
-//@import "_dataAttribute.scss";
+@import "_dataAttribute.scss";
 
 html {
     touch-action: manipulation;
