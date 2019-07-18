@@ -36,22 +36,25 @@ $marginTheme: 2ren + 4ren;
     @return $conbine;
   }
 
+  @function setHeight($height){
+    @return $height * 0.5; 
+  }
+
   .lobby{
     display: block;
     position: relative;
-    max-width: 100%;
-    width: 100%;
-    height: 1080px;
-    background: url('../img/bg.jpg');
+    width: 960px;
+    height: 540px;
+    background: url('../img/bg.jpg') no-repeat center;
   }
 
   .resume{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: setHeight(100%);
+    height: setHeight(100%);
     top: 0;
     left: 0;
-    background: url('../img/user_status_bg.png') no-repeat;
+    background: url('../img/user_status_bg.png') no-repeat center;
     .playerPic{
       position: absolute;
       border-radius: 999px;
@@ -60,7 +63,6 @@ $marginTheme: 2ren + 4ren;
       border: solid 3px #fff; 
       .playerPic::before{
         content: "";
-        
         width: 100%;
         height: 100%;
       }
