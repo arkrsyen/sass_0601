@@ -45,7 +45,9 @@ $marginTheme: 2ren + 4ren;
     position: relative;
     width: 960px;
     height: 540px;
-    background: url('../img/bg.jpg') no-repeat center;
+    background: url('../img/bg.jpg') no-repeat;
+    margin: auto;
+    background-size: cover;
   }
 
   .resume{
@@ -54,12 +56,13 @@ $marginTheme: 2ren + 4ren;
     height: setHeight(100%);
     top: 0;
     left: 0;
-    background: url('../img/user_status_bg.png') no-repeat center;
+    background: url('../img/user_status_bg.png') no-repeat;
+    background-size: 50%;
     .playerPic{
       position: absolute;
       border-radius: 999px;
-      width: 150px;
-      height: 150px;
+      width: 10vh;
+      height: 10vh;
       border: solid 3px #fff; 
       .playerPic::before{
         content: "";
@@ -84,6 +87,24 @@ $marginTheme: 2ren + 4ren;
     }
   }
 }
+
+@function setHeight($height){
+  @return $height * 0.5; 
+}
+
+@for $gameMenu from 1 through 3 {
+  .gameMenu-#{$gameMenu}{
+    background: url(game0#{$gameMenu}.png);
+  }
+}
+
+.mainMenu{
+  position: absolute;
+
+}
+
+
+
 
 
 }
