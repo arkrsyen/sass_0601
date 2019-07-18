@@ -219,10 +219,3 @@ $iphoneX:"screen and (max-widch:812px) and (max-heigh:375px) and (-webkit-max-de
         @content;
     }
 }
-
-@mixin half50 {
-    @function setWidth($herfWidth){
-        $conbine:#{$herfWidth*50%};
-        @return $conbine;
-      }
-} 
