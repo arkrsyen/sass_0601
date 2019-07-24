@@ -192,6 +192,103 @@ $bottomMenu:"bottom_menu_01", "bottom_menu_02", "bottom_menu_03", "bottom_menu_0
    background-repeat: no-repeat;
   
  }
+ #app{
+  @include flexBox(column);
+  @include flexAlign(center,center);
+  @include boxSizing;
+  width: 100%;
+  height: 100%;
+      width: 37%;
+    height: 73%;
+    position: absolute;
+
+}
+
+$fishImg:"fish_1", "fish_2", "fish_3", "treasurebox";
+@each $fishIcon in $fishImg {
+  .#{$fishIcon}{
+    &::after{
+      width: 60px;
+      height: 70px;
+      background: url('../img/#{$fishIcon}.png') no-repeat;
+      background-size: 100%;
+    }
+  }
+} 
+
+.fish_3{
+  background-size: cover;
+}
+
+.questBanner{
+  width: 363px;
+  height: 18vh;
+  padding: 0.5rem;
+  margin: 1vh;
+  top: -8vh;
+  background: url(../img/daily_quest_header.png) no-repeat;
+  background-size: 64%;
+  position: absolute;
+}
+
+ul.daily_quest{
+  @include flexBox(column);
+  li{
+    @include flexBox(row);
+    @include flexAlign(center, flex-start);
+    @include boxSizing;
+    position: relative;
+    width: 340px;
+    height: 80px;
+    padding: 0.5rem;
+    background: url('../img/quest_bg.png') no-repeat;
+    background-size: 65%;
+   
+    &:before, &:after{
+      content: "";
+    }
+    &:before{
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      margin: 1vh;
+      background: url('../img/lock.png') no-repeat;
+      background-size: 51%; 
+      z-index: 2;
+    }
+    .fish_icon_block{
+      position: relative;
+      font-size: 0.6rem;
+      width: 60px;
+      height: 60px;
+    }
+    &:after{
+    position: absolute;
+    right: 117px;
+    top: 3px;
+    content: "";
+    font-size: 0.6rem;
+    }
+    .btn_get_reward{
+      width: 50px;
+      height: 30px;
+      margin: 2px 5px 0px 9px;
+      background: url('../img/get_reward_btn.png')no-repeat;
+      background-size: 36%;
+      border: yellow 0;
+      position: absolute;
+    }
+    label{
+      flex: 1;
+      padding: 0 2.5rem 0.7rem 3.4rem;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  }
+}
   
 
 
