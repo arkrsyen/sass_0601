@@ -231,6 +231,38 @@ $fishImg:"fish_1", "fish_2", "fish_3", "treasurebox";
   position: absolute;
 }
 
+.coinConter{
+  position: absolute;
+  top: 1vh;
+  left: 34vh;
+  width: 7vh;
+  height: 7vh;
+  background: url(../img/coin.svg) no-repeat;
+  background-size: 100%;
+  z-index: 3;
+  
+}
+
+.numberBar{
+  position: absolute;
+  border: solid 1px #fff;
+  width: 23%;
+  height: 6%;
+  top: 3.5%;
+  left: 34.5vh;
+  border-radius: 999px;
+  &:after{
+    content: "999,999,999";
+    color: #fff;
+    position: absolute;
+    width: 22%;
+    height: 6vh;
+    font-size: 1rem;
+    padding: 8px 10vh 0;
+    text-align: center;
+  }
+}
+
 ul.daily_quest{
   @include flexBox(column);
   li{
